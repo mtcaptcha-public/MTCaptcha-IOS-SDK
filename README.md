@@ -1,2 +1,3 @@
-# MTCaptcha-IOS-SDK
-SDK for iOS app
+# CaptchaSDK
+
+A description of this package.
