@@ -35,26 +35,26 @@ public class CaptchaSDK: UIView,WKUIDelegate {
         super.init(frame: frame)
     }
     
-    func setDomain(productionDomain:String){
+    public func setDomain(productionDomain:String){
         self.domain=productionDomain
     }
     
-    func setSitekey(sitekey:String){
+    public func setSitekey(sitekey:String){
         self.sitekey=sitekey
     }
     
-    func setAction(action:String){
+    public func setAction(action:String){
         self.action=action
     }
-    func setTheme(theme:String){
+    public func setTheme(theme:String){
         self.theme=theme
     }
     
-    func setWidgetSize(widgetSize:String){
+    public func setWidgetSize(widgetSize:String){
         self.widgetSize=widgetSize
     }
     
-    func setCustomStyle(customStyle:String){
+    public func setCustomStyle(customStyle:String){
         self.customStyle=customStyle
     }
     
@@ -93,7 +93,7 @@ public class CaptchaSDK: UIView,WKUIDelegate {
         return config;
     }
     
-    func initWidget(productionDomain:String,sitekey:String){
+    public func initWidget(productionDomain:String,sitekey:String){
         // Do any additional setup after loading the view.
         
         self.setDomain(productionDomain: productionDomain)
@@ -142,7 +142,7 @@ public class CaptchaSDK: UIView,WKUIDelegate {
         """
     }
     
-    func renderWidget(){
+    public func renderWidget(){
         webView = WKWebView(frame: self.bounds, configuration: WKWebViewConfiguration() )
         self.addSubview(webView)
         self.webView.allowsBackForwardNavigationGestures = true
@@ -151,7 +151,7 @@ public class CaptchaSDK: UIView,WKUIDelegate {
         webView.loadHTMLString(self.html, baseURL:myurl )
     }
     
-    func getVerifiedToken() -> String {
+    public func getVerifiedToken() -> String {
         let scriptSource = "getToken()"
         var res=""
         webView.evaluateJavaScript(scriptSource) { (result, error) in
