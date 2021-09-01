@@ -7,7 +7,7 @@
 import UIKit
 import WebKit
 
-class CaptchaSDK: UIView,WKUIDelegate {
+public class CaptchaSDK: UIView,WKUIDelegate {
     
     /*
      // Only override draw() if you perform custom drawing.
