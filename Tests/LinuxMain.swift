@@ -1,7 +1,7 @@
 import XCTest
 
-import CaptchaSDKTests
+import MTCaptchaTests
 
 var tests = [XCTestCaseEntry]()
-tests += CaptchaSDKTests.allTests()
+tests += MTCaptchaTests.allTests()
 XCTMain(tests)
